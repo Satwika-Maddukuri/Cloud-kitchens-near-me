@@ -1,0 +1,110 @@
+
+
+
+    <HTML>
+      <!--
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        -->
+        <head>
+          <title> HUNGER BOUNCE</title>
+          <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="styling.css">
+        
+        
+        </head>
+        
+        <BODY>
+        <div class="full-page">
+          <div class="navbar">
+            <div>
+                <a href='#'>HUNGER BOUNCE</a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='#'>Home</a></li>
+                    <li><a href="#">Log In to Order</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+          </div>
+    
+    <!----
+        <div class="container"  style="background-color:#E6D3F2;">   
+            <div class="col-2"><a href="home.html">Log In to Order</a></div>
+              <div class="col-2"><a href="adminLogin.html">Admin Login</a></div> 
+              </div>--->  
+          
+           
+            
+              <div id='login-form'class='login-page'>   
+            <div class="form-box" >
+              <div class='button-box'>
+                <div id='btn'></div>
+                <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+            </div>
+              <form id='login' class='input-group-login' method="POST" action="verifyUser.php?utype=user">
+                      <div >
+                          <label for="exampleInputName" >User Name</label>
+                          <input type='text'class='input-field'placeholder='UserName' required name="UserName" >
+                          <br>
+                          <small id="emailHelp" class="form-text text-muted">Enter a User Name that you will remember.</small>
+                      </div>
+                      <br>
+                      <div >
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type='password'class='input-field'placeholder='Password' required name="Password" >
+                          <br>
+                          <small id="passwordHelp" class="form-text text-muted">Keep it cryptic as possible.</small>
+                      </div>
+                      <br>
+                      <div class="form-group">
+                        <label for="exampleInputusertype">User Type</label>
+                        <input type="text" class="input-field" id="exampleInputusertype" placeholder="UserType" name="UserType">
+                      </div>
+                      <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                      <form id='register' class='input-group-register'>
+                        <a style="color:black;" class="submit-btn " data-toggle="collapse" href="NewUser.php" role="button" aria-expanded="false" aria-controls="collapseExample" >
+            New User
+          </a>
+                    </form>
+            </div>
+           </div> 
+        
+      
+          
+      </div>
+      
+      
+      <script>
+        var x=document.getElementById('login');
+    var y=document.getElementById('register');
+    var z=document.getElementById('btn');
+    function register()
+    {
+      x.style.left='-400px';
+      y.style.left='50px';
+      z.style.left='110px';
+    }
+    function login()
+    {
+      x.style.left='50px';
+      y.style.left='450px';
+      z.style.left='0px';
+    }
+    </script>
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+        </BODY>
+        </HTML>
